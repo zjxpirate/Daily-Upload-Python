@@ -3,7 +3,7 @@
 import collections
 
 
-class stack:
+class Stack:
     ElementWithCachedMax = collections.namedtuple('ElementWithCachedMax', ('element', 'max'))
 
     def __init__(self):
@@ -27,7 +27,7 @@ class stack:
 
 
 
-s1 = stack()
+s1 = Stack()
 
 s1.push(3)
 s1.push(4)
