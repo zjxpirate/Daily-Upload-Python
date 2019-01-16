@@ -1,6 +1,6 @@
 
 
-
+from Binary_Trees_node import BinaryTreeNode
 
 
 
@@ -23,4 +23,7 @@ def binary_tree_depth_order(tree):
 
 
 
+b = BinaryTreeNode(1, BinaryTreeNode(2, BinaryTreeNode(5)), BinaryTreeNode(3))
 
+
+print(binary_tree_depth_order(b))
