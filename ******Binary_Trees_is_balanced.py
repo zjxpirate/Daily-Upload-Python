@@ -8,7 +8,7 @@ def is_balanced_binary_tree(tree):
 
 
     # First value of the return value indicates if tree is balanced, and if
-    # balanced the second value of the return value id the height of the tree.
+    # balanced the second value of the return value is the height of the tree.
 
     def check_balanced(tree):
         if not tree:
