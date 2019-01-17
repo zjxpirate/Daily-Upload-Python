@@ -24,6 +24,7 @@ def binary_tree_depth_order(tree):
 
 
 b = BinaryTreeNode(1, BinaryTreeNode(2, BinaryTreeNode(5)), BinaryTreeNode(3))
+s = BinaryTreeNode(5, BinaryTreeNode(6, BinaryTreeNode(8), BinaryTreeNode(9)), BinaryTreeNode(7, BinaryTreeNode(10), BinaryTreeNode(11)))
 
 
-print(binary_tree_depth_order(b))
+print(binary_tree_depth_order(s))
