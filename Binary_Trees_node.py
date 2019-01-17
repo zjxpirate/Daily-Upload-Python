@@ -8,10 +8,11 @@ from Binary_Trees_utils import binary_tree_to_string, equal_binary_trees
 
 
 class BinaryTreeNode:
-    def __init__(self, data=None, left=None, right=None):
+    def __init__(self, data=None, left=None, right=None, size=None):
         self.data = data
         self.left = left
         self.right = right
+        self.size = size
 
 
 
