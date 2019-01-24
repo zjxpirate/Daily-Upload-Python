@@ -1,5 +1,8 @@
 
 
+
+
+
 import heapq
 
 
@@ -11,15 +14,17 @@ def merge_sorted_arrays(sorted_arrays):
     #print(sorted_array_iters)
 
 
-    print(min_heap)
+    #print(min_heap)
     # Puts first element fom each iterator in min_heap.
     for i, it in enumerate(sorted_array_iters):
         #print(it)
+        #print(i)
         first_element = next(it, None)
         #print(first_element)
         if first_element is not None:
             #print(i)
             heapq.heappush(min_heap, (first_element, i))
+            #print(min_heap)
 
 
     #print(min_heap)
@@ -37,6 +42,7 @@ def merge_sorted_arrays(sorted_arrays):
         #print(result)
 
         next_element = next(smallest_array_iter, None)
+        #print(next_element)
         if next_element is not None:
             #print(next_element)
             heapq.heappush(min_heap, (next_element, smallest_array_i))
@@ -52,10 +58,6 @@ input = [[1, 1, 3, 5], [1, 2, 2, 4]]
 
 
 print(merge_sorted_arrays(input))
-
-
-
-
 
 
 
