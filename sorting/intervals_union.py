@@ -2,6 +2,8 @@
 
 import collections
 
+# 9. compute the union of intervals
+
 Endpoint = collections.namedtuple('Endpoint', ('is_closed', 'val'))
 
 Interval = collections.namedtuple('Interval', ('left', 'right'))
