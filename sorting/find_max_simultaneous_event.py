@@ -11,6 +11,12 @@ Event = collections.namedtuple('Event', ('start', 'finish'))
 # are equal, start_time comes first
 Endpoint = collections.namedtuple('Endpoint', ('time', 'is_start'))
 
+
+seq = [Event(start=1, finish=5),
+       Event(start=2, finish=7),
+       Event(start=4, finish=5)]
+
+
 def find_max_simultaneous_events(A):
 
     # builds an array of all endpoints.
@@ -34,5 +40,5 @@ def find_max_simultaneous_events(A):
     return max_num_simultaneous_events
 
 
-
+print(find_max_simultaneous_events(seq))
 

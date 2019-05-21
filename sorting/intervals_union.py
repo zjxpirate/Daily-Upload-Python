@@ -1,12 +1,26 @@
-import collections
-import functools
 
-from test_framework import generic_test
-from test_framework.test_utils import enable_executor_hook
+
+import collections
+
 
 Endpoint = collections.namedtuple('Endpoint', ('is_closed', 'val'))
 
 Interval = collections.namedtuple('Interval', ('left', 'right'))
+
+
+inter = [
+    Interval(left= 0, right= 3),
+    Interval(left= 2, right= 4),
+    Interval(left= 3, right= 4),
+    Interval(left= 5, right= 7),
+    Interval(left= 7, right= 8),
+    Interval(left= 8, right= 11),
+    Interval(left= 9, right= 11),
+    Interval(left= 12, right= 14),
+    Interval(left= 12, right= 16),
+    Interval(left= 13, right= 15),
+    Interval(left= 16, right= 17)
+]
 
 
 def union_of_intervals(intervals):
@@ -30,20 +44,5 @@ def union_of_intervals(intervals):
     return result
 
 
-@enable_executor_hook
-def union_of_intervals_wrapper(executor, intervals):
-    intervals = [
-        Interval(Endpoint(x[1], x[0]), Endpoint(x[3], x[2])) for x in intervals
-    ]
 
-    result = executor.run(functools.partial(union_of_intervals, intervals))
-
-    return [(i.left.val, i.left.is_closed, i.right.val, i.right.is_closed)
-            for i in result]
-
-
-if __name__ == '__main__':
-    exit(
-        generic_test.generic_test_main("intervals_union.py",
-                                       "intervals_union.tsv",
-                                       union_of_intervals_wrapper))
+print(union_of_intervals(inter))

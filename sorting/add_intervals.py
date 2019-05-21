@@ -6,6 +6,17 @@ import collections
 
 Interval = collections.namedtuple('Interval', ('left', 'right'))
 
+di = [
+    Interval(left=-4, right=-1),
+    Interval(left=0, right=2),
+    Interval(left=3, right=6),
+    Interval(left=7, right=9),
+    Interval(left=11, right=12),
+    Interval(left=14, right=17)
+]
+
+ni = Interval(left=1, right=8)
+
 
 def add_interval(disjoint_intervals, new_interval):
     i, result = 0, []
@@ -14,7 +25,6 @@ def add_interval(disjoint_intervals, new_interval):
 
     # processes intervals in disjoint_intervals which come before new_interval
     while (i < len(disjoint_intervals) and new_interval.left > disjoint_intervals[i].right):
-        print("hello")
         result.append(disjoint_intervals[i])
         i += 1
 
@@ -27,7 +37,7 @@ def add_interval(disjoint_intervals, new_interval):
     # processes intervals in disjoint_intervals which come after new_interval
     return result + [new_interval] + disjoint_intervals[i:]
 
-
+print(add_interval(di, ni))
 
 
 
