@@ -1,24 +1,4 @@
 
-from bstNode import BstNode, insert
-
-tree_1 = BstNode(19, None, None)
-
-insert(7, tree_1)
-insert(43, tree_1)
-insert(3, tree_1)
-insert(11, tree_1)
-insert(23, tree_1)
-insert(47, tree_1)
-insert(2, tree_1)
-insert(5, tree_1)
-insert(17, tree_1)
-insert(37, tree_1)
-insert(53, tree_1)
-insert(13, tree_1)
-insert(29, tree_1)
-insert(41, tree_1)
-insert(31, tree_1)
-
 
 
 # 10. enumerate numbers of the form a+b*(2)**(1/2)
