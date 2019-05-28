@@ -1,9 +1,9 @@
 
 
 
-# 10. enumerate numbers of the form a+b*(2)**(1/2)
+# 11. enumerate numbers of the form a+b*(2)**(1/2)
 
-import math, bintrees
+import math
 
 class Number:
     def __init__(self, a, b):
