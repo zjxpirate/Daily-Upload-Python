@@ -20,6 +20,7 @@ def num_combinations_for_final_score(final_score, individual_play_scores):
 
             num_combinations_for_score[i][j] = (without_this_play + with_this_play)
 
+    print(num_combinations_for_score)
     return num_combinations_for_score[-1][-1]
 
 
